@@ -4,7 +4,7 @@ Features:
 
 * Open and edit saved KoboldAI sessions. 
 * Convert .holo to .json files. (loadable by KoboldAI)
-* Search session for names. (very basic) \\n
+* Search session for names. (very basic)
 * Search session for variables. (very basic)
 * Global string replace function.
 * Export/Import worldinfo as json files.
