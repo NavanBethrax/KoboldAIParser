@@ -15,7 +15,7 @@ Important:
 There are little features that might change.
 * The prompt is split and saved to actions for now.
 * Worldinfo keys get always converted to lower.
-* Worldinfo content automatically replaces new lines with space.
+* Worldinfo content automatically replaces new lines with space. (makes "[]" easier.)
 
 ![Preview](https://i.imgur.com/omh1ZJL.png)
 
