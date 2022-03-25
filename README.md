@@ -10,6 +10,7 @@ Features:
 * Export/Import worldinfo as json files.
 
 Important:
+* You have to check game started for the prompt to be loaded the way it works now.
 
 There are little features that might change.
 * The prompt is split and saved to actions for now.
