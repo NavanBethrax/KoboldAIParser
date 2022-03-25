@@ -13,7 +13,7 @@ Important:
 * You have to check game started for the prompt to be loaded the way it works now.
 
 There are little features that might change.
-* The prompt is split and saved to actions for now.
+* The prompt is split and saved to actions for now. (i had problems with too large prompts)
 * Worldinfo keys get always converted to lower.
 * Worldinfo content automatically replaces new lines with space. (makes "[]" easier.)
 
