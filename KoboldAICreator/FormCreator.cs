@@ -100,6 +100,7 @@ namespace KoboldAICreator
 
         private void refreshUI()
         {
+            commitChanges();
 
             richTextBox1.Text = String.Join("\n", project.actions);
             richTextBox2.Text = project.memory;
@@ -121,7 +122,6 @@ namespace KoboldAICreator
 
         private void propertyGrid1_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            commitChanges();
             refreshUI();
         }
 
