@@ -19,5 +19,7 @@ There are other little features that might change.
 * Worldinfo keys get always converted to lower.
 * Worldinfo content automatically replaces new lines with space.
 
+![Preview](https://i.imgur.com/omh1ZJL.png)
+
 Icon Source:
 https://www.flaticon.com/de/kostenlose-icons/kobold
