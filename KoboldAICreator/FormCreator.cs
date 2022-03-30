@@ -100,7 +100,7 @@ namespace KoboldAICreator
 
         private void refreshUI()
         {
-            commitChanges();
+            
 
             richTextBox1.Text = String.Join("\n", project.actions);
             richTextBox2.Text = project.memory;
@@ -122,6 +122,7 @@ namespace KoboldAICreator
 
         private void propertyGrid1_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
+            commitChanges();
             refreshUI();
         }
 
@@ -366,6 +367,7 @@ namespace KoboldAICreator
         {
             project.worldinfo.Add(new KoboldAIWorldInfo("New Info", "", "", "", null, false, false));
 
+            commitChanges();
             refreshUI();
         }
 
@@ -376,6 +378,7 @@ namespace KoboldAICreator
                 project.worldinfo.RemoveAt(listBox1.SelectedIndex);
             }
 
+            commitChanges();
             refreshUI();
         }
 
@@ -390,6 +393,7 @@ namespace KoboldAICreator
             if (open.ShowDialog() == DialogResult.OK)
             {
                 project.worldinfo.Add(Parser.ReadKoboldAIWorldInfo(open.FileName));
+                commitChanges();
                 refreshUI();
             }
 
@@ -429,7 +433,7 @@ namespace KoboldAICreator
                 {
                     project.worldinfo.Insert(index, item);
                 }
-
+                commitChanges();
                 refreshUI();
             }
 
@@ -451,7 +455,7 @@ namespace KoboldAICreator
                 {
                     project.worldinfo.Insert(index, item);
                 }
-
+                commitChanges();
                 refreshUI();
             }
 
