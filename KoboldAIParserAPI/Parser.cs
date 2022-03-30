@@ -27,8 +27,6 @@ public static class Parser
 
     public static KoboldAIData ReadHoloData(string path)
     {
-
-        string prompt = "";
         string memory = "";
         string authorsnote = "";
         List<string> actions = new List<string>();
@@ -71,7 +69,7 @@ public static class Parser
         }
 
 
-        return new KoboldAIData(true, prompt, memory, authorsnote, "[Genre: <|>]", actions, worldinfo);
+        return new KoboldAIData(true, actions[0], memory, authorsnote, "[Genre: <|>]", actions.Skip(1).ToList(), worldinfo) ;
     
     }
 

@@ -92,7 +92,15 @@ namespace KoboldAICreator
 
         private void commitChanges()
         {
-            project.actions = richTextBox1.Text.Split("\n").ToList();
+            List<string> promptSplit= richTextBox1.Text.Split("\n").ToList();
+
+            project.prompt = promptSplit[0];
+            
+            if (promptSplit.Count > 0)
+            {
+            project.actions = promptSplit.Skip(1).ToList();
+            }
+            
             project.memory = richTextBox2.Text;
             project.authorsnote = richTextBox3.Text;
             project.gamestarted = checkBox1.Checked;
@@ -100,9 +108,12 @@ namespace KoboldAICreator
 
         private void refreshUI()
         {
-            
+            List<string> prompt = new List<string>();
 
-            richTextBox1.Text = String.Join("\n", project.actions);
+            prompt.Add(project.prompt);
+            prompt.AddRange(project.actions);
+
+            richTextBox1.Text = String.Join("\n", prompt);
             richTextBox2.Text = project.memory;
             richTextBox3.Text = project.authorsnote;
             checkBox1.Checked = project.gamestarted;
