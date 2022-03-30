@@ -14,7 +14,7 @@ Important:
 * If you compile the file yourself you have to create a "Prompts" and a "WorldInfo" folder for now.
 
 There are little features that might change.
-* The prompt is split and saved to actions for now. (i had problems with too large prompts)
+* The prompt is split by newLine and saved to prompt and actions.
 * Worldinfo keys get always converted to lower.
 * Worldinfo content automatically replaces new lines with space. (makes "[]" easier.)
 
